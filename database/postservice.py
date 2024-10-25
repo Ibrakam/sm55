@@ -1,4 +1,4 @@
-from database.models import UserPost, Comment, Hashtag
+from database.models import UserPost, Comment, Hashtag, PostPhoto
 from database import get_db
 
 
@@ -119,3 +119,11 @@ def add_hashtag(hashtag):
         db.add(hashtag1)
         db.commit()
         return True
+
+
+# def add_post_photo(post_id, photo_url):
+#     with next(get_db()) as db:
+#         photo = PostPhoto(post_id=post_id, photo_path=photo_url)
+#         db.add(photo)
+#         db.commit()
+#         return True
